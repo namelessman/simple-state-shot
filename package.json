@@ -1,8 +1,8 @@
 {
   "name": "simple-state-shot",
   "version": "0.0.0-development",
-  "description": "",
-  "keywords": [],
+  "description": "a simple state history manager",
+  "keywords": ["state", "history"],
   "main": "dist/simplestateshot.umd.js",
   "module": "dist/simplestateshot.es5.js",
   "typings": "dist/types/simplestateshot.d.ts",
@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "scripts": {
     "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
@@ -29,7 +29,7 @@
     "deploy-docs": "ts-node tools/gh-pages-publish",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "commit": "git-cz",
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release && npm publish",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
     "travis-deploy-once": "travis-deploy-once",
