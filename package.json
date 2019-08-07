@@ -2,7 +2,10 @@
   "name": "simple-state-shot",
   "version": "0.0.0-development",
   "description": "a simple state history manager",
-  "keywords": ["state", "history"],
+  "keywords": [
+    "state",
+    "history"
+  ],
   "main": "dist/simplestateshot.umd.js",
   "module": "dist/simplestateshot.es5.js",
   "typings": "dist/types/simplestateshot.d.ts",
@@ -86,6 +89,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.1.2",
     "@commitlint/config-conventional": "^7.1.2",
+    "@semantic-release/changelog": "^3.0.4",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.11.0",
     "colors": "^1.3.2",
