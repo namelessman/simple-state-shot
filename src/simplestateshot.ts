@@ -2,7 +2,7 @@
  * @Author: namelessman
  * @Date: 2019-08-01 00:12:21
  * @LastEditors: namelessman
- * @LastEditTime: 2019-08-01 13:21:12
+ * @LastEditTime: 2019-08-09 09:30:28
  */
 class SimpleStateShot {
   constructor(private _maxLength?: number) {
@@ -21,7 +21,7 @@ class SimpleStateShot {
     return null
   }
 
-  push(state: any) {
+  push(state: any): SimpleStateShot {
     // don't push if equal with current state
     if (JSON.stringify(state) === JSON.stringify(this.get())) {
       return this
@@ -53,7 +53,7 @@ class SimpleStateShot {
     return true
   }
 
-  undo() {
+  undo(): SimpleStateShot {
     if (this.hasUndo) {
       this._index--
     }
@@ -61,7 +61,7 @@ class SimpleStateShot {
     return this
   }
 
-  redo() {
+  redo(): SimpleStateShot {
     if (this.hasRedo) {
       this._index++
     }
@@ -69,7 +69,7 @@ class SimpleStateShot {
     return this
   }
 
-  reset() {
+  reset(): SimpleStateShot {
     this._index = -1
     this._states = []
 
