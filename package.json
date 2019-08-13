@@ -1,6 +1,6 @@
 {
   "name": "simple-state-shot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "a simple state history manager",
   "keywords": [
     "state",
