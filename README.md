@@ -43,7 +43,7 @@ const simpleStateShot = new SimpleStateShot(10)
 ```
 ### push
 push a new state to the stack
-**note: `undefined` won't be pushed**
+**note: state should be JSON-safe.**
 
 ### get
 get the last state. if no state in the stack, `null` will be returned
